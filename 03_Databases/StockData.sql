@@ -1,0 +1,85 @@
+--StockData.sql
+--Jack Carroll
+--Populate StockSYS.sql with sample data
+
+--Delete tables
+
+DELETE
+FROM SaleItems;
+DELETE
+FROM Sales;
+DELETE
+FROM Stock;
+DELETE
+FROM Suppliers;
+
+INSERT INTO Suppliers
+VALUES(1,'Levis Co','01 2222222');
+
+INSERT INTO Suppliers
+VALUES(2,'Wrangler','01 3333333');
+
+INSERT INTO Suppliers
+VALUES(3,'Pepe','01 4444444');
+
+INSERT INTO Suppliers
+VALUES(4,'Falmer Co','01 5555555');
+
+INSERT INTO Suppliers
+VALUES(5,'Burtons','01 6666666');
+
+
+INSERT INTO Stock
+VALUES(1,'Levis 501',50.00,75.00,100,1);
+
+INSERT INTO Stock
+VALUES(2,'Wrangler Regular',40.00,65.00,50,2);
+
+INSERT INTO Stock
+VALUES(3,'Levis 901',80.00,105.00,35,1);
+
+INSERT INTO Stock
+VALUES(4,'Pepe Skinny',45.00,70.00,20,3);
+
+INSERT INTO Stock
+VALUES(5,'Levis 601',35.00,null,10,1);
+
+
+
+INSERT INTO Sales
+VALUES(1,'01-SEP-16',150.00);
+
+INSERT INTO Sales
+VALUES(2,'12-SEP-16',110.00);
+
+INSERT INTO Sales
+VALUES(3,'21-SEP-16',315.00);
+
+INSERT INTO Sales
+VALUES(4,'03-OCT-16',460.00);
+
+
+
+
+INSERT INTO SaleItems
+VALUES(1,1,2,75.00);
+
+INSERT INTO SaleItems
+VALUES(2,2,1,65.00);
+
+INSERT INTO SaleItems
+VALUES(2,4,1,45.00);
+
+INSERT INTO SaleItems
+VALUES(3,3,3,105.00);
+
+INSERT INTO SaleItems
+VALUES(4,1,3,75.00);
+
+INSERT INTO SaleItems
+VALUES(4,2,2,65.00);
+
+INSERT INTO SaleItems
+VALUES(4,3,1,105.00);
+
+COMMIT;
